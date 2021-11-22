@@ -3,7 +3,13 @@ export default function App() {
   return (
     <>
       <h1>Test Header</h1>
-      <button>Hey!</button>
+      <button
+        onClick={() => {
+          electron.notificationApi.sendNotification("Custom Notification!");
+        }}
+      >
+        Hey!
+      </button>
     </>
   );
 }
