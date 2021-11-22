@@ -19,7 +19,8 @@ app.whenReady().then(() => {
     height: 800,
     backgroundColor: "white",
     webPreferences: {
-      preload: path.join(__dirname, "preload.js"),
+      nodeIntegration: true,
+      contextIsolation: false,
     },
   });
 
